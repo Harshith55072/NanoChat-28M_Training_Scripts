@@ -17,6 +17,11 @@ checkpoints/*.safetensors
 checkpoints/*.bin
 !checkpoints/.gitkeep
 
+# Hugging Face publish package -- self-contained folder with model weights + tokenizer,
+# meant to be uploaded to HF directly (see huggingface_release/README.md), not committed
+# to this code repo (large binaries, duplicates what's already in checkpoints/).
+huggingface_release/
+
 # OS junk
 .DS_Store
 Thumbs.db

@@ -180,9 +180,19 @@ Worth doing for resume purposes once training/quantization/inference are finaliz
 - `torch.load` throws a `weights_only=False` FutureWarning on every checkpoint load —
   expected/harmless for our own trusted local files, not an actual problem.
 
-## Immediate next step
-Build the keyword-injection layer (`inference/` — new script, e.g. `chat_runtime.py`):
-takes a rolling window of the big model's recent transcript text, extracts a couple of
-keywords, and either (a) seeds `generate()`'s prompt with one occasionally, or (b)
-generates several candidates and filters/prioritizes by keyword overlap. This is the
-last major piece — core model + training + inference speed are all done.
+## v1 STATUS: COMPLETE (2026-07-23)
+Extended training (60,000 steps total, resumed from the 30k checkpoint) + expanded
+superchat data (roasts/jokes/personal questions added) + the keyword-injection bug fix
+(contractions like "let's" were slipping past the stopword filter and dominating
+generations) together produced a v1 the user considers good enough to ship. Sample
+output at 60k steps: mostly readable, on-topic chat with real Twitch texture (correct
+emote usage, @-mentions, streamer name references), some residual garbling concentrated
+in the highest-chaos persona preset. Considered acceptable given real chat's inherent
+noisiness — further improvement would mean raw-data cleaning, a real but
+diminishing-returns next step, not required to consider this done.
+
+## Immediate next step (updated)
+Core project (data → tokenizer → model → training → inference → keyword injection →
+demo) is functionally complete. Remaining work is publishing: build the Hugging Face
+model card, upload weights (safetensors) + tokenizer + model/model.py, and push code to
+GitHub (`.gitignore` already set up for this). See "Hugging Face publishing plan" above.
