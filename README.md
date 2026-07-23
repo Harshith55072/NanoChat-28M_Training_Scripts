@@ -84,6 +84,6 @@ python inference/interface.py
 
 ## License
 
-Code: MIT (adjust if you'd prefer otherwise). Model weights inherit CC-BY-SA-4.0 from
+Code: MIT. Model weights inherit CC-BY-SA-4.0 from
 the primary training dataset -- see `huggingface_release/README.md` for the full model
 card and license details.
