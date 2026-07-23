@@ -1,0 +1,29 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyc
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Model weights and checkpoints -- these are large binary files and don't belong in git.
+# GitHub has a hard 100MB per-file limit and gets slow/bloated with binaries anyway.
+# Final trained model goes to Hugging Face instead (see project.md); this repo is code only.
+checkpoints/*.pt
+checkpoints/*.safetensors
+checkpoints/*.bin
+!checkpoints/.gitkeep
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
