@@ -5,7 +5,7 @@ consumer laptop GPU (RTX 4050, 6GB VRAM), that generates simulated live-stream c
 both fast, low-effort "hype chat" and rarer, longer "superchat"-style messages. Built as
 a lightweight, fast-on-CPU audience-simulation layer for AI VTuber / livestream setups.
 
-**Trained model, weights, and usage instructions:** [Hugging Face model page](#) <!-- update this link after uploading -->
+**Trained model, weights, and usage instructions:** [Hugging Face model page](https://huggingface.co/Batman55072/NanoChat-28M-V1) 
 
 ## What this is
 
